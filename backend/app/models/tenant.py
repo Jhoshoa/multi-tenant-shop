@@ -16,7 +16,9 @@ class Tenant(Base, TimestampMixin):
     banner_url: Mapped[str | None] = mapped_column(String(500))
     currency: Mapped[str] = mapped_column(String(3), default="USD", nullable=False)
     plan: Mapped[str] = mapped_column(String(20), default="free", nullable=False)
-    is_active: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
+    is_active: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    status: Mapped[str] = mapped_column(String(20), default="pending", nullable=False)
+    rejected_reason: Mapped[str | None] = mapped_column(Text)
 
     settings: Mapped["TenantSettings"] = relationship(back_populates="tenant", uselist=False, cascade="all, delete-orphan")
     users: Mapped[list["User"]] = relationship(back_populates="tenant")

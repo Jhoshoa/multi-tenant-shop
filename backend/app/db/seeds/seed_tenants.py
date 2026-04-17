@@ -20,6 +20,7 @@ async def seed_tenants(db: AsyncSession) -> Tenant:
         currency="USD",
         plan="free",
         is_active=True,
+        status="active",
     )
     db.add(tenant)
     await db.flush()

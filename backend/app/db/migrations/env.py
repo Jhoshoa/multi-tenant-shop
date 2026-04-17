@@ -14,6 +14,7 @@ import app.models.product_image  # noqa: F401
 import app.models.inventory    # noqa: F401
 import app.models.order        # noqa: F401
 import app.models.notification  # noqa: F401
+import app.models.invitation   # noqa: F401
 
 config = context.config
 if config.config_file_name is not None:

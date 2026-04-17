@@ -21,6 +21,8 @@ class TenantOut(BaseModel):
     currency: str
     plan: str
     is_active: bool
+    status: str
+    rejected_reason: str | None
     settings: TenantSettingsOut | None
 
     model_config = {"from_attributes": True}
