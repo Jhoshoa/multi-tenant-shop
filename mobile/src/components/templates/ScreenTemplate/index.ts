@@ -1,0 +1,1 @@
+export { ScreenTemplate } from './ScreenTemplate'

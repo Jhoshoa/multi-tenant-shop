@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/redoc)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/docs)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/docs)",
+      "Bash(node -e \"const fs=require\\('fs'\\); const p=fs.readFileSync\\('./node_modules/react-native-reanimated/plugin/index.js','utf8'\\); const idx=p.indexOf\\('react-native-worklets'\\); console.log\\(p.substring\\(Math.max\\(0,idx-100\\), idx+200\\)\\)\")"
     ]
   }
 }

@@ -1,0 +1,1 @@
+export { InventoryAdjuster } from './InventoryAdjuster'

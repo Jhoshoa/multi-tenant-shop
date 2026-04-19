@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Mi Tienda",
+    "slug": "mi-tienda",
+    "scheme": "mitienda",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Necesitamos acceso a tus fotos para subir imágenes de productos."
+        }
+      ],
+      [
+        "expo-notifications",
+        {}
+      ],
+      "expo-secure-store"
+    ],
+    "android": {
+      "package": "com.miapp.tienda",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{ "scheme": "mitienda" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.miapp.tienda",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos la cámara para fotografiar tus productos.",
+        "NSPhotoLibraryUsageDescription": "Necesitamos acceso a tus fotos para subir imágenes."
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "tu-project-id"
+      }
+    }
+  }
+}

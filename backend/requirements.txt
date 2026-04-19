@@ -17,6 +17,7 @@ python-multipart==0.0.12
 # ── Supabase ───────────────────────────────────────────
 supabase==2.9.0
 PyJWT==2.9.0
+cryptography>=42.0.0
 
 # ── Cloudinary ─────────────────────────────────────────
 cloudinary==1.41.0

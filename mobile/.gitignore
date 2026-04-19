@@ -1,0 +1,49 @@
+# Dependencies
+node_modules
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Environment variables — never commit real credentials
+.env
+.env.local
+.env.production
+
+# Native builds
+android/
+ios/
+
+# EAS
+.easignore
+
+# Build artifacts
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Metro bundler cache
+.metro-health-check*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+coverage/
